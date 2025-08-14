@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 
 const TodoApp = () => {
-        const API_BASE_URL = 'https://todo-backend-lk5e.onrender.com';
+    const API_BASE_URL = 'https://full-todo-app-q23c.onrender.com';
     
         const fetchTodos = async () => {
             setLoading(true);
