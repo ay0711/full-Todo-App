@@ -8,6 +8,21 @@ import TodoApp from './Pages/TodoApp';
 
 
 function App() {
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(reg => {
+          console.log(`SW registered: ${reg}`);
+          console.log(reg);
+        })
+        .catch(regError => {
+          console.log(`SW registration failed: ${regError}`);
+          console.log(regError);
+        })
+    }
+  }, [])
   return (
     <div className="App">
       <Routes>
